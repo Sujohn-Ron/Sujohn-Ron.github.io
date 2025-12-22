@@ -240,48 +240,6 @@
     
     <div class="category row nomargin-x">
       <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="技巧"
-        id="heading-952d012fcbf9d533dab2eae0ca3ca41f" role="tab" data-toggle="collapse" href="#collapse-952d012fcbf9d533dab2eae0ca3ca41f"
-        aria-expanded="false"
-      >
-        技巧
-        <span class="list-group-count"></span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-        <a href="/categories/%E6%8A%80%E5%B7%A7/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
-          <span>1</span>
-        </a>
-      
-      <div class="category-collapse collapse " id="collapse-952d012fcbf9d533dab2eae0ca3ca41f"
-           role="tabpanel" aria-labelledby="heading-952d012fcbf9d533dab2eae0ca3ca41f">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/2025/12/22/%E5%A5%87%E5%B7%A7%E6%B7%AB%E6%8A%80/" title="奇巧淫技"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">奇巧淫技</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="比赛"
         id="heading-a5c5d0dc90ccf0733d65742d59d28ccc" role="tab" data-toggle="collapse" href="#collapse-a5c5d0dc90ccf0733d65742d59d28ccc"
         aria-expanded="false"
@@ -310,6 +268,48 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">ISCC2025</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="技巧"
+        id="heading-952d012fcbf9d533dab2eae0ca3ca41f" role="tab" data-toggle="collapse" href="#collapse-952d012fcbf9d533dab2eae0ca3ca41f"
+        aria-expanded="false"
+      >
+        技巧
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E6%8A%80%E5%B7%A7/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>1</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-952d012fcbf9d533dab2eae0ca3ca41f"
+           role="tabpanel" aria-labelledby="heading-952d012fcbf9d533dab2eae0ca3ca41f">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/12/22/%E5%A5%87%E5%B7%A7%E6%B7%AB%E6%8A%80/" title="奇巧淫技"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">奇巧淫技</span>
         </a>
       
     
@@ -379,12 +379,225 @@
 </div>
 
 <script>
-// 一言API（如果要换API，改这里）
-fetch('https://v1.hitokoto.cn').then(r => r.json()).then(d => {
-  document.getElementById('hitokoto-text').textContent = d.hitokoto;
-  const fromEl = document.getElementById('hitokoto-from');
-  if (d.from) fromEl.textContent = ' —— ' + d.from;
+// ==============================================
+// 纯前端一言实现（无API依赖）
+// 包含你的所有自定义内容
+// ==============================================
+
+// 你的所有一言数据（直接嵌入到JS中）
+const hitokotoData = [
+  '医药，法律等为人类发展生存之必须，而诗，浪漫，美好与爱则是生存之意义|死亡诗社',
+  '中秋谁与共孤光，把盏凄然北望。|苏轼',
+  '恰沐春风共同游，终只叹，木已舟。|网易云',
+  '以"舍身取义"来强迫他人者，其"义"或"信仰"本身就都很可疑|史铁生',
+  '"我的爱人侧面是一条直线"|惊春',
+  '"这辆列车没有终点，因为LEARNING IS ENDLESS"|知乎',
+  '"苦难不值得追求，磨练意志是因为苦难无法避开"|余华',
+  '我们说了一些见外的话，互相试探着对方在为己所不知的岁月中已改变的地方|远藤周作',
+  '"杜鹃鸟啊，这雨是只落在我身上吗？"|小林一茶',
+  '毕竟几人真得鹿，不知终日梦为鱼。|黄庭坚',
+  '千言万语，都用力的化为沉默，这就是我们这种笨拙的人，爱你的方式|知乎',
+  '这世上的书从未被哪一个人看完过，而看过很多书却没有思想能力的人也不少。|史铁生',
+  '人们并不知道婴儿的未来，可都说"恭喜！"，人们也不知道死后的世界，却都说"可惜！"|三毛',
+  '当然，那不是我。可是，那不是我吗？|史铁生',
+  '顺天意，承因果，今日方知我是我。|王阳明',
+  '空山无人，水流花开。万古长空，一朝风月。|明朝那些事儿',
+  '"是谁来自，山川湖海？却囿于昼夜，厨房与爱。"|万能青年旅店',
+  '沉思往事立残阳，当时只道是寻常。|纳兰性德',
+  '人生若只如见，何事秋风悲画扇？|纳兰性德',
+  '人道洛阳花似锦，偏我来时不逢春。|岑参',
+  '伟大的唐吉柯德，要继续自己的冒险了。|塞万提斯',
+  '抱着找寻自由的心，哪里都是监牢。|Ron',
+  '少年心气不可再生。|九边Pro',
+  '恐惧是生物的本能，勇气是人类的赞歌.|JoJo的奇妙冒险',
+  '花自飘零水自流，我天马行空，自由如风|Ron',
+  '我们于欢呼声中迎接光明，我们于恸哭声中接受黑暗。|知乎',
+  '生我何用，没能欢笑。灭我何用，不减狂骄。|悟空传',
+  '负尽千重罪，炼就不死心。|悟空传',
+  '"大家一起回去吧，我来接你们了哦！"|海贼王',
+  '春盛处，花落人独立。|知乎',
+  '他想起来小时候丢的那些石子，这么多年了那些石子才纷纷落地。|蜘蛛',
+  '人生何必常相伴，遥以相思寄东风。|二哈和他的白猫师尊',
+  '永远年轻，永远热泪盈眶！|凯鲁亚克',
+  '生命很短，我爱你，你要记得我。|陪安东尼度过漫长岁月',
+  '花自飘零水自流，勿关冷暖关风月。|Ron',
+  '馨香盈怀袖，路远莫致之。此物何足贵，但敢别经时。|无名',
+  '年少张狂，不信山高水长|Ron',
+  '天地与我并生，而万物与我为一。|庄子',
+  '家里养的花自杀了，遗书写道："一生不愁吃穿，唯独缺少阳光与爱。"|周国平',
+  '缘起缘灭，云卷云舒。|知乎',
+  '一花一世界，一树一菩提。|悟空传',
+  '弃我去者，昨日之日不可留，乱我心者，今日之日多烦忧。|李白',
+  '在所有物是人非的景色里，我最喜欢你。|喜欢',
+  '生如夏花之绚烂，死如秋叶之静美。|飞鸟集',
+  '弓对离弦的箭说道："你的自由就是我的自由。"|飞鸟集',
+  '对那些无名的日子的感触攀附在我的心上，像蔓延在老树周身的苔藓。|飞鸟集',
+  '我说不出这心为什么那样默默颓丧着，是为了它那不曾要求，不曾知道，不曾记得的小小要求|飞鸟集',
+  '以热泪在世界的海岸上写着她的题记"我爱你"|飞鸟集',
+  '如自简单，如此艰难。|瞬',
+  '你所浪费的今天，是死在昨天的人所期待的明天。|知乎',
+  '命运无法让我们跪地求饶。|追梦赤子心',
+  '浩渺行无极，扬帆但信风。|尚颜',
+  '楼前相望不相知，陌上相逢讵相识？|卢照邻',
+  '夏意妩媚盛大，而离别小小的，小如一个胆怯的眼神，顾左右，不言他。|飞鸟集',
+  '从来如此，便对吗？|鲁迅',
+  '靠近你就靠近了痛苦，远离你就远离了幸福。|窄门',
+  '我来到这个世界，是来看花怎么开，水怎么流，太阳怎么升起，生命是一场偶然，我在其中寻找因果。|王小波',
+  '我思故我在|笛卡尔',
+  '我是枯萎了半春的花，等不来爱人的夏。|知乎',
+  '我腐朽的尸体会长满绿色，直至我的灵魂自由。|知乎',
+  '我从没预想独身，却有预感晚婚。|晚婚',
+  '一切都是选择，选择你所能承受的。|征婚启事',
+  '骄傲与谦卑未必是反义词，有低贱的骄傲，也有高贵的谦卑。|周国平',
+  '我向着一条路极目望去，直到它消失在丛林深处。|弗罗斯特',
+  '什么都重要，什么都不是非有不可。|知乎',
+  '"天理即是人欲。"|明朝那些事儿'
+];
+
+// 分类映射表（用于智能显示来源）
+const sourceMapping = {
+  '死亡诗社': { from_who: '', from: '死亡诗社' },
+  '苏轼': { from_who: '苏轼', from: '' },
+  '网易云': { from_who: '', from: '网易云' },
+  '史铁生': { from_who: '史铁生', from: '' },
+  '惊春': { from_who: '惊春', from: '' },
+  '知乎': { from_who: '', from: '知乎' },
+  '余华': { from_who: '余华', from: '' },
+  '远藤周作': { from_who: '远藤周作', from: '' },
+  '小林一茶': { from_who: '小林一茶', from: '' },
+  '黄庭坚': { from_who: '黄庭坚', from: '' },
+  '三毛': { from_who: '三毛', from: '' },
+  '王阳明': { from_who: '王阳明', from: '' },
+  '明朝那些事儿': { from_who: '', from: '《明朝那些事儿》' },
+  '万能青年旅店': { from_who: '', from: '万能青年旅店' },
+  '纳兰性德': { from_who: '纳兰性德', from: '' },
+  '岑参': { from_who: '岑参', from: '' },
+  '塞万提斯': { from_who: '塞万提斯', from: '《唐吉柯德》' },
+  'Ron': { from_who: 'Ron', from: '' },
+  '九边Pro': { from_who: '', from: '九边Pro' },
+  'JoJo的奇妙冒险': { from_who: '', from: '《JoJo的奇妙冒险》' },
+  '悟空传': { from_who: '', from: '《悟空传》' },
+  '海贼王': { from_who: '', from: '《海贼王》' },
+  '蜘蛛': { from_who: '蜘蛛', from: '' },
+  '二哈和他的白猫师尊': { from_who: '', from: '《二哈和他的白猫师尊》' },
+  '凯鲁亚克': { from_who: '凯鲁亚克', from: '' },
+  '陪安东尼度过漫长岁月': { from_who: '', from: '《陪安东尼度过漫长岁月》' },
+  '无名': { from_who: '佚名', from: '' },
+  '庄子': { from_who: '庄子', from: '' },
+  '周国平': { from_who: '周国平', from: '' },
+  '李白': { from_who: '李白', from: '' },
+  '喜欢': { from_who: '', from: '《喜欢》' },
+  '飞鸟集': { from_who: '泰戈尔', from: '《飞鸟集》' },
+  '瞬': { from_who: '瞬', from: '' },
+  '追梦赤子心': { from_who: '', from: '《追梦赤子心》' },
+  '尚颜': { from_who: '尚颜', from: '' },
+  '卢照邻': { from_who: '卢照邻', from: '' },
+  '鲁迅': { from_who: '鲁迅', from: '' },
+  '窄门': { from_who: '纪德', from: '《窄门》' },
+  '王小波': { from_who: '王小波', from: '' },
+  '笛卡尔': { from_who: '笛卡尔', from: '' },
+  '晚婚': { from_who: '', from: '《晚婚》' },
+  '征婚启事': { from_who: '', from: '《征婚启事》' },
+  '弗罗斯特': { from_who: '弗罗斯特', from: '' }
+};
+
+// 从数据中随机获取一言
+function getRandomHitokoto() {
+  if (hitokotoData.length === 0) {
+    return {
+      hitokoto: '暂无内容',
+      from_who: '',
+      from: ''
+    };
+  }
+  
+  // 随机选择
+  const randomIndex = Math.floor(Math.random() * hitokotoData.length);
+  const item = hitokotoData[randomIndex];
+  
+  // 解析内容
+  const parts = item.split('|');
+  if (parts.length < 2) {
+    return {
+      hitokoto: item.trim(),
+      from_who: '',
+      from: '未知'
+    };
+  }
+  
+  const content = parts[0].trim();
+  const sourceKey = parts[1].trim();
+  
+  // 获取来源信息
+  const sourceInfo = sourceMapping[sourceKey] || { 
+    from_who: sourceKey, 
+    from: '' 
+  };
+  
+  // 如果from_who为空，尝试智能判断
+  if (!sourceInfo.from_who && sourceInfo.from) {
+    // 从《作品》格式中提取作者
+    const match = sourceInfo.from.match(/《(.+)》/);
+    if (match) {
+      sourceInfo.from_who = '';
+    } else {
+      sourceInfo.from_who = sourceInfo.from;
+      sourceInfo.from = '';
+    }
+  }
+  
+  return {
+    hitokoto: content,
+    from_who: sourceInfo.from_who || '',
+    from: sourceInfo.from || '',
+    length: content.length
+  };
+}
+
+// 显示一言
+function displayHitokoto() {
+  try {
+    const data = getRandomHitokoto();
+    const hitokotoEl = document.getElementById('hitokoto-text');
+    const fromEl = document.getElementById('hitokoto-from');
+    
+    if (hitokotoEl) {
+      hitokotoEl.textContent = data.hitokoto;
+    }
+    
+    if (fromEl) {
+      // 构建来源显示文本
+      let fromText = '';
+      if (data.from_who && data.from) {
+        fromText = ` —— ${data.from_who}《${data.from}》`;
+      } else if (data.from_who) {
+        fromText = ` —— ${data.from_who}`;
+      } else if (data.from) {
+        fromText = ` —— ${data.from}`;
+      }
+      fromEl.textContent = fromText;
+    }
+  } catch (error) {
+    console.error('显示一言失败:', error);
+    const hitokotoEl = document.getElementById('hitokoto-text');
+    if (hitokotoEl) {
+      hitokotoEl.textContent = '加载完成';
+    }
+  }
+}
+
+// 页面加载时显示一言
+document.addEventListener('DOMContentLoaded', function() {
+  // 延迟一点显示，模拟加载效果
+  setTimeout(displayHitokoto, 100);
+  
+  // 可选：每30分钟自动刷新一次
+  // setInterval(displayHitokoto, 30 * 60 * 1000);
 });
+
+// ==============================================
+// 原有运行时间代码（保持不变）
+// ==============================================
 
 // 精确到秒的运行时间（精简版）
 const start = new Date('2025-12-21T04:15:54'); // 精确时间
@@ -402,6 +615,14 @@ function updateRuntime() {
 
 updateRuntime();
 setInterval(updateRuntime, 1000);
+
+// ==============================================
+// 可选：添加点击刷新一言的功能
+// ==============================================
+document.getElementById('hitokoto-text').addEventListener('click', function(e) {
+  e.preventDefault();
+  displayHitokoto();
+});
 </script>
 
 <!-- 原主题页脚，去掉边框线 -->
