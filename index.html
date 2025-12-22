@@ -401,23 +401,57 @@
   </main>
 
   <footer>
-    footer:
-  content: |
-    <div id="hitokoto">一言加载中...</div>
-    <div id="runtime">博客运行: <span>0</span> 天</div>
-    
-    <script>
-    // 一言
-    fetch('https://v1.hitokoto.cn').then(r => r.json()).then(d => {
-      document.getElementById('hitokoto').innerHTML = 
-        `${d.hitokoto}<br><small>—— ${d.from || '未知'}</small>`;
-    });
-    
-    // 运行时间
-    const start = new Date('2024-01-01'); // 修改日期
-    const days = Math.floor((new Date() - start) / 86400000);
-    document.querySelector('#runtime span').textContent = days;
-    </script>
+    <!-- 自定义内容：一字号更大 -->
+<div style="text-align: center; margin-bottom: 10px;">
+  <!-- 一言 -->
+  <div style="margin-bottom: 5px;">
+    <span id="hitokoto-text" style="color: #999; font-weight: 400;  font-size: 1.20em; font-style: italic; font-family: 'Georgia', 'Times New Roman', serif;">加载中...</span>
+    <span id="hitokoto-from" style="color: #999; font-weight: 400;  font-size: 0.95em; font-style: italic; font-family: 'Georgia', 'Times New Roman', serif;"></span>
+  </div>
+  
+  <!-- 运行时间 -->
+<div style="color: #888; font-size: 1.2em; font-weight: 600; font-family: 'Arial', sans-serif;">
+  博客已运行 <span id="runtime" style="color: #888; font-weight: 800;">0天0时0分0秒</span>
+</div>
+</div>
+</div>
+
+<script>
+// 一言API（如果要换API，改这里）
+fetch('https://v1.hitokoto.cn').then(r => r.json()).then(d => {
+  document.getElementById('hitokoto-text').textContent = d.hitokoto;
+  const fromEl = document.getElementById('hitokoto-from');
+  if (d.from) fromEl.textContent = ' —— ' + d.from;
+});
+
+// 精确到秒的运行时间（精简版）
+const start = new Date('2025-12-21T04:15:54'); // 精确时间
+
+function updateRuntime() {
+  const diff = Date.now() - start;
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor(diff % 86400000 / 3600000);
+  const minutes = Math.floor(diff % 3600000 / 60000);
+  const seconds = Math.floor(diff % 60000 / 1000);
+  
+  document.getElementById('runtime').textContent = 
+    `${days}天${hours}时${minutes}分${seconds}秒`;
+}
+
+updateRuntime();
+setInterval(updateRuntime, 1000);
+</script>
+
+<!-- 原主题页脚，去掉边框线 -->
+<div class="footer-inner" style="border-top: none !important; margin-top: 0; padding-top: 0;">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
   </footer>
 
   <!-- Scripts -->
