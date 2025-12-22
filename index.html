@@ -401,16 +401,23 @@
   </main>
 
   <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-    </div>
-  
-  
-  
-</div>
-
+    footer:
+  content: |
+    <div id="hitokoto">一言加载中...</div>
+    <div id="runtime">博客运行: <span>0</span> 天</div>
+    
+    <script>
+    // 一言
+    fetch('https://v1.hitokoto.cn').then(r => r.json()).then(d => {
+      document.getElementById('hitokoto').innerHTML = 
+        `${d.hitokoto}<br><small>—— ${d.from || '未知'}</small>`;
+    });
+    
+    // 运行时间
+    const start = new Date('2024-01-01'); // 修改日期
+    const days = Math.floor((new Date() - start) / 86400000);
+    document.querySelector('#runtime span').textContent = days;
+    </script>
   </footer>
 
   <!-- Scripts -->
