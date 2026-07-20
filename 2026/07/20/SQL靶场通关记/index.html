@@ -19,25 +19,43 @@
   <meta name="author" content="SancyZyW0o">
   <meta name="keywords" content="">
   
-    <meta name="description" content="我的生长痛回归更新的第一篇，在刷短视频时我听到这样一句歌词： “只恨年少时天资愚钝，参不透缘分” 回想起来，自己对于各方面感情的观念已较少年时期有了很大变化，于是决定在这里聊一聊 亲情我的父母都出身农村，他们对于教育并没有自己的研究，于是从小到大，优绩主义，愧疚式教育我都曾经历过，这也给当时小小的我带来不少烦恼，后来，他们发现我并没有长成他们期望的样子，于是对我有了更多的压力，我也曾想要和他们好好">
+    <meta name="description" content="Less-1[联合查询]:打开如图，由提示试输入id：   注意：空格不会影响闭环 由下方sql执行知道用表为users，mysql内查询知列数为3，id个数为14，联合传参后发现无正确回显：  这里的–+起什么作用？我们可以来看看这里查询逻辑的代码：  select * from users where id&#x3D;&#39;$id&#39; limit 0,1 我们在确定id值后需要加入攻击代码，这">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的生长痛">
-<meta property="og:url" content="https://sujohn-ron.github.io/2026/04/29/%E6%88%91%E7%9A%84%E7%94%9F%E9%95%BF%E7%97%9B/index.html">
+<meta property="og:title" content="SQL靶场通关记">
+<meta property="og:url" content="https://sujohn-ron.github.io/2026/07/20/SQL%E9%9D%B6%E5%9C%BA%E9%80%9A%E5%85%B3%E8%AE%B0/index.html">
 <meta property="og:site_name" content="SancyZyW0o&#39;s Blog">
-<meta property="og:description" content="我的生长痛回归更新的第一篇，在刷短视频时我听到这样一句歌词： “只恨年少时天资愚钝，参不透缘分” 回想起来，自己对于各方面感情的观念已较少年时期有了很大变化，于是决定在这里聊一聊 亲情我的父母都出身农村，他们对于教育并没有自己的研究，于是从小到大，优绩主义，愧疚式教育我都曾经历过，这也给当时小小的我带来不少烦恼，后来，他们发现我并没有长成他们期望的样子，于是对我有了更多的压力，我也曾想要和他们好好">
+<meta property="og:description" content="Less-1[联合查询]:打开如图，由提示试输入id：   注意：空格不会影响闭环 由下方sql执行知道用表为users，mysql内查询知列数为3，id个数为14，联合传参后发现无正确回显：  这里的–+起什么作用？我们可以来看看这里查询逻辑的代码：  select * from users where id&#x3D;&#39;$id&#39; limit 0,1 我们在确定id值后需要加入攻击代码，这">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260429031813_204_2.jpg">
-<meta property="article:published_time" content="2026-04-28T18:01:09.000Z">
-<meta property="article:modified_time" content="2026-07-19T19:11:00.318Z">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-11%2520195955.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-11%2520200411.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-11%2520210817.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/Pasted%2520image%252020260719211004.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202026-07-20%2520022730.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-11%2520211006.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-11%2520211129.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-11%2520211811.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-13%2520011733.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-13%2520015404.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-13%2520015946.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-13%2520020822.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-13%2520024432.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-13%2520024723.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-16%2520175917.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-16%2520180339.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-16%2520204425.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-16%2520215432.png">
+<meta property="og:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-16%2520215920.png">
+<meta property="article:published_time" content="2026-07-19T19:05:08.000Z">
+<meta property="article:modified_time" content="2026-07-20T07:47:48.143Z">
 <meta property="article:author" content="SancyZyW0o">
-<meta property="article:tag" content="文字">
-<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="Web Sec">
+<meta property="article:tag" content="靶场">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260429031813_204_2.jpg">
+<meta name="twitter:image" content="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-11%2520195955.png">
   
   
   
-  <title>我的生长痛 - SancyZyW0o&#39;s Blog</title>
+  <title>SQL靶场通关记 - SancyZyW0o&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -215,7 +233,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="我的生长痛"></span>
+            <span id="subtitle" data-typed-text="SQL靶场通关记"></span>
           
         </div>
 
@@ -226,8 +244,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2026-04-29 02:01" pubdate>
-          2026年4月29日 凌晨
+        <time datetime="2026-07-20 03:05" pubdate>
+          2026年7月20日 凌晨
         </time>
       </span>
     
@@ -238,7 +256,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          3.5k 字
         
       </span>
     
@@ -249,7 +267,7 @@
         
         
         
-          14 分钟
+          30 分钟
         
       </span>
     
@@ -286,25 +304,118 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">我的生长痛</h1>
+            <h1 id="seo-header">SQL靶场通关记</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="我的生长痛"><a href="#我的生长痛" class="headerlink" title="我的生长痛"></a>我的生长痛</h1><p>回归更新的第一篇，在刷短视频时我听到这样一句歌词：</p>
-<p><strong>“只恨年少时天资愚钝，参不透缘分”</strong></p>
-<p>回想起来，自己对于各方面感情的观念已较少年时期有了很大变化，于是决定在这里聊一聊</p>
-<h2 id="亲情"><a href="#亲情" class="headerlink" title="亲情"></a>亲情</h2><p>我的父母都出身农村，他们对于教育并没有自己的研究，于是从小到大，优绩主义，愧疚式教育我都曾经历过，这也给当时小小的我带来不少烦恼，后来，他们发现我并没有长成他们期望的样子，于是对我有了更多的压力，我也曾想要和他们好好聊一下，可当时我还不能很清楚的表达我的想法，再后来我发现他们其实也并不在乎，于是我的话变得越来越少，想来，我现在的不善言辞也许就是那时候养成的，再后来，他们出于关心我的成绩跟我聊起学校内的生活，我总是搪塞几句，我已经不想跟他们聊这些了。</p>
-<p>我总觉得父母没有给到我期望中的关爱，不是说经济上的，而是他们并不关心我的想法，或者说他们并不关心我是怎么样的人，他们关心我有没有拿到一个好成绩，上的是不是好学校，能不能让他们在亲戚朋友面前有面子，但他们又从不在经济上对我小气过，通常只要我要，他们就给，每次面对几百几千的费用，我开口时总会觉得难堪，觉得在浪费父母的钱，这份难堪和父母对我的压力让我感觉矛盾，另外一个让我感觉矛盾的是我的父亲，他身上同时保留着大男子主义和半开放的思想，常常今天在令我动容他的开明，明天又让我唾弃他的腐朽，我始终说不清我对他的感情，因为我也从来没看清他对我的感情，他会说只希望我健健康康的活一辈子，其他什么都无所谓，也会在我考差时气急败坏的让我考不上就回老家打工，他不会再供我。</p>
-<p>“我们家不养闲人！！”</p>
-<p>这句话我记到现在，原来我在我的家待了十几年，爸爸妈妈我叫了十几年，一次考试没过，我就成了这个家的“闲人”了，也是因为这句话，让我知道有些话是不能说的，我父亲当时是否真是这样的想法我已不在意，但当时听到这句话带给我的冲击我记得很清楚。</p>
-<p>现在我并不怪我的父母，更多的是体谅和感恩，上大学后听别人讲他们的原生家庭，那叫一个凄苦悲凉，百家争鸣，相比他们我的心事已算是奢侈的烦恼，父母给我不错的物质基础和教育环境，我人生的前半截其实并没有什么大的波折，勉强算心智健全的走到现在，我很感激他们。</p>
-<h2 id="恋情"><a href="#恋情" class="headerlink" title="恋情"></a>恋情</h2><p>对于恋情，我想应该单独开一期写一下，这里就不聊的太多，我总是会从喜欢的人身上获取一部分的特质，这些特质组成了现在的我，上一份恋情bad ending，更糟糕的是我变得更加的多疑敏感，甚至继承了对方的恋痛倾向，那段关系让我收获了很多的快乐，也确实的消耗了我，我的交流欲望变得很低，开始没有精力认识新的人</p>
-<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260429031813_204_2.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>翻看聊天记录还是会因为美好的瞬间感到温暖，但一道道裂痕的堆积最终让这段关系走向了分别，我们的吵架越来越频繁，其实分开的前两天我们才刚刚从一场大吵中和好，当时我在这段关系中已经很累了，恋爱带给我的快乐并不会缓解无休止的争吵对我的消耗，坦白说我已经没有原来那样无限量的耐心去接住她的情绪，我开始感觉到有一点厌烦，我不知道该怎么办，以至于最后导致我们分开的不算大的争吵中，我在很长一段时间内陷入了犹豫，磕磕绊绊的继续这场消耗我的关系是否是正确的？没等我想清楚，时间已过去了很久，已经没有再缓和这段关系的机会了</p>
-<h2 id="友情"><a href="#友情" class="headerlink" title="友情"></a>友情</h2><p>迄今为止我人生每一个阶段最要好的朋友现在基本都断了联系，还保有联系的反而是之前没有那么亲近的，曾经的挚友们去了不同的地方，各自有了不同的经历，互相之间自然越来越无法兼容，这道理花了我很久才想明白，最让我唏嘘的是L君和D君。</p>
-<p>L君是我高中时期的朋友，我已忘记是怎样和她相识，但记得熟络的过程极短，从高一开始我们和另一位Y君三人相伴，度过了很开心的两年。</p>
-<p>变数发生在高考之后，我名落孙山而选择了复读，L君不堪再过一年高三生活而选择了无锡的一所民办本科，自此我们走上了不同的道路，开学后我们的联系少了很多，但那时我仍然相信我们的友情会持续很久，每到周末闲聊几句，对于当时的我已十分满足，再后来我慢慢感觉到她的变化，有的令当时的我无法理解，我从那时就隐约感觉我们的友情已经在慢慢枯死</p>
+                <h3 id="Less-1-联合查询"><a href="#Less-1-联合查询" class="headerlink" title="Less-1[联合查询]:"></a>Less-1[联合查询]:</h3><p>打开如图，由提示试输入id：</p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-11%2520195955.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-11%2520200411.png" srcset="/img/loading.gif" lazyload></p>
+<p>注意：空格不会影响闭环</p>
+<p>由下方sql执行知道用表为users，mysql内查询知列数为3，id个数为14，联合传参后发现无正确回显：<br> <img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-11%2520210817.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="这里的–-起什么作用？"><a href="#这里的–-起什么作用？" class="headerlink" title="这里的–+起什么作用？"></a>这里的–+起什么作用？</h4><p>我们可以来看看这里查询逻辑的代码：<br> <img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/Pasted%2520image%252020260719211004.png" srcset="/img/loading.gif" lazyload><br> <code>select * from users where id=&#39;$id&#39; limit 0,1</code><br> 我们在确定id值后需要加入攻击代码，这时要想办法注释原代码$id后面的顿号来确保攻击代码正常被执行，选择合适的注释方式就好，在URL栏内+会被解码为空格，所以本质上–+是使用了两个横杠加空格的单行注释方法</p>
+<h4 id="为什么需要符合表要求的id值才能进行注入："><a href="#为什么需要符合表要求的id值才能进行注入：" class="headerlink" title="为什么需要符合表要求的id值才能进行注入："></a>为什么需要符合表要求的id值才能进行注入：</h4><p>同样的我们看看题目的查询逻辑，只有当id值与数据库内表匹配才会执行sql语句，否则返回空查询结果且后面的语句也不会被执行<br> <img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202026-07-20%2520022730.png" srcset="/img/loading.gif" lazyload></p>
+<p>将语句在MySQL中执行知合法传参下无法注入：</p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-11%2520211006.png" srcset="/img/loading.gif" lazyload></p>
+<p>试非法传参作为注入点：</p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-11%2520211129.png" srcset="/img/loading.gif" lazyload></p>
+<p>函数：</p>
+<ol>
+<li>LIMIT 函数<ul>
+<li>语法和基本用法<ul>
+<li>在 SQL 中，<code>LIMIT</code>是用于限制查询结果返回行数的关键字。语法格式通常为<code>LIMIT [offset], count</code>。</li>
+<li>例如在 MySQL 数据库中，查询语句<code>SELECT * FROM users LIMIT 5;</code>会从<code>users</code>表中选择前 5 行数据。这里省略了<code>offset</code>（偏移量），默认从第 0 行开始（即结果集的第一行）。</li>
+<li>如果想要从结果集的第 3 行开始，取 2 行数据，可以使用<code>SELECT * FROM users LIMIT 3, 2;</code>。其中<code>3</code>是偏移量，表示从第 3 行开始（索引从 0 开始），<code>2</code>是要返回的行数。</li>
+</ul>
+</li>
+<li>用途<ul>
+<li><strong>优化查询性能</strong>：当处理大型数据集时，只获取需要的数据量可以减少数据库的负载，提高查询速度。例如，在一个包含数百万条记录的用户表中，如果只需要显示前 10 条用户信息用于页面展示，使用<code>LIMIT 10</code>可以避免查询和传输整个表的数据。</li>
+<li><strong>分页功能</strong>：在 Web 应用程序中，用于实现分页效果。例如，每页显示 20 条记录，第一页可以使用<code>LIMIT 0, 20</code>（从第 0 行开始取 20 行），第二页使用<code>LIMIT 20, 20</code>（从第 20 行开始取 20 行），以此类推。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>GROUP_CONCAT 函数<ul>
+<li>语法和基本用法<ul>
+<li><code>GROUP_CONCAT</code>函数是一种聚合函数，主要用于将分组后的字符串列值连接成一个字符串。语法为<code>GROUP_CONCAT([DISTINCT] expr [,expr...][ORDER BY {unsigned_integer | col_name | expr} [ASC|DESC] [,col_name...]][SEPARATOR str_value])</code>。</li>
+<li>在 MySQL 中，假设存在一个<code>orders</code>表，包含<code>customer_id</code>和<code>product_name</code>列。如果想要按照<code>customer_id</code>对<code>product_name</code>进行分组连接，可以使用<code>SELECT customer_id, GROUP_CONCAT(product_name) FROM orders GROUP BY customer_id;</code>。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>使用gruop_concat函数与schema库完成注入：</p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-11%2520211811.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="Less-2-Less-4："><a href="#Less-2-Less-4：" class="headerlink" title="Less-2-Less-4："></a>Less-2-Less-4：</h3><p>第一关基本一致，但要注意第二关是基于数字型的 SQL 注入。与字符型注入不同，数字型注入不需要处理单引号或双引号的闭合问题，也就不需要测闭环方式。</p>
+<h3 id="Less-5-Less-10-布尔盲注"><a href="#Less-5-Less-10-布尔盲注" class="headerlink" title="Less-5-Less-10[布尔盲注]:"></a>Less-5-Less-10[布尔盲注]:</h3><p>打开题目及源码发现不存在报错回显：</p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-13%2520011733.png" srcset="/img/loading.gif" lazyload></p>
+<p>由于不存在回显，故以\测闭环方式不可行，选择布尔盲注</p>
+<p>易知在错误传参后不会显示’you ‘re in‘，于是选择and 连接一个必错条件如1&#x3D;2，发现无异常说明and 后部分未被执行，盲注得知闭环方式为：’</p>
+<p><strong>ascii函数：</strong></p>
+<p>是一个用于获取指定字符的 ASCII 码值的函数。它接受一个字符作为输入参数，然后返回该字符对应的 ASCII 码值</p>
+<p>例：</p>
+<p>SELECT ASCII(char_column) FROM test_table;</p>
+<p>获取该字段中每个字符的 ASCII 码值。</p>
+<p>注意；</p>
+<p><code>ASCII</code>函数通常要求输入的是单个字符，如果传入多个字符的字符串，不同的数据库系统可能会有不同的处理方式，可能会只取第一个字符进行计算，或者返回错误。</p>
+<p>大写字母：ASCII码值&gt;65 &lt;90</p>
+<p>小写字母：                  &gt;97 &lt;122</p>
+<p><strong>length函数：</strong></p>
+<p>用以返回字符串长度</p>
+<p>例；select length (‘Ron’);</p>
+<p>回显字符’Ron‘的长度</p>
+<p><strong>substring函数：</strong></p>
+<p>用于从一个字符串中截取指定长度的子字符串。它可以根据指定的起始位置和长度，从原始字符串中提取出一部分作为新的字符串。</p>
+<p>例：select substr（’字符串‘，从第位开始，需要截几位）；</p>
+<p>select substr（’1234‘，2，2）</p>
+<p>输出结果：23</p>
+<p>由于不存在回显，需要爆破获得数据库名与表名，此时需要ASCII函数确定大小写，length函数可确定数据库长度，测得长度为8，首字母为S：</p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-13%2520015404.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-13%2520015946.png" srcset="/img/loading.gif" lazyload></p>
+<p>用burp爆破数据库长度与名称:</p>
+<p>burp抓包后在intruder模块中标记length结果并在爆破后查看响应长度不同的8即为数据库长度：</p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-13%2520020822.png" srcset="/img/loading.gif" lazyload></p>
+<p>以同样的方法在burp中用ascii函数爆破出数据库名：security</p>
+<p>注意由于有两个参数所以选择集束炸弹（Clusterbomb）</p>
+<p>if函数（时间盲注）：</p>
+<p>一种条件判断函数，用于根据条件表达式的结果返回不同的值。</p>
+<p>例句；if（’条件‘，’如果为真则执行’，’如果为假则执行’）</p>
+<p>在Less-8中，测出闭环方式后可以使用if函数爆破数据库长度与名称:</p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-13%2520024432.png" srcset="/img/loading.gif" lazyload></p>
+<p>使用burp方法同理，但由于burp中不显示响应时间，使用较困难，可以使用py脚本</p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-13%2520024723.png" srcset="/img/loading.gif" lazyload></p>
+<p>updatexml函数（报错注入）：</p>
+<p>例句：select updatexml(1,concat(‘!’,(SQL语句),’!’),1)</p>
+<p>例如：select updatexml(1,concat(‘!’,(select database()),’!’),1)</p>
+<p>该语句中的1，！并非硬性要求，但需要一直且必定报错，concat函数连接三字符串会在前后两字符串报错情况下输出中间字符串结果，如上句输出结果为： ‘!security!’</p>
+<h3 id="Less-11-Less12-post传参，联合查询"><a href="#Less-11-Less12-post传参，联合查询" class="headerlink" title="Less-11-Less12[post传参，联合查询]:"></a>Less-11-Less12[post传参，联合查询]:</h3><p>打开发现是post传参，判断是否有注入：</p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-16%2520175917.png" srcset="/img/loading.gif" lazyload></p>
+<p>为什么是 ‘or’而不是之前的‘and’？</p>
+<p>从源码入手，可知在输入’后完成闭环，此时id值为空，若用and则必定报错，切记不能简单理解成：Get用and，Post用or：</p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-16%2520180339.png" srcset="/img/loading.gif" lazyload></p>
+<p>理解之后步骤与之前类似，以order by语句得出字段数为2，联合查询得显错位为2，库名为security，表名为emails：</p>
+<p>’ or 1&#x3D;1 order by 2 – qwe</p>
+<p>‘ union select 1,database() – qwe</p>
+<p>‘union select 1,table_name from information_schema.tables where table_schema&#x3D;’security’ – qwe</p>
+<p>回显方式：</p>
+<p>11:’  12:  “)  13:  ‘)  14:  “</p>
+<h3 id="Less-13-Less-14-报错注入"><a href="#Less-13-Less-14-报错注入" class="headerlink" title="Less-13-Less-14[报错注入]"></a>Less-13-Less-14[报错注入]</h3><p>这题特点在于无回显而有报错，故用updatesml函数得到库名为security，表名为emails,列名为id：</p>
+<p>‘) and updatexml(1,concat(0x7e,(select database()),0x7e),1) – qwe</p>
+<p>‘) and updatexml(1,concat(0x7e,(select table_name from information_schema.tables where table_schema&#x3D;’security’ limit 0,1),0x7e),1) – qwe</p>
+<p>‘) and updatexml(1,concat(0x7e,(select column_name from information_schema.columns where table_schema&#x3D;’security’ and table_name&#x3D;’emails’ limit 0,1),0x7e),1) – qwe</p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-16%2520204425.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="Less-15-Less-16-布尔盲注"><a href="#Less-15-Less-16-布尔盲注" class="headerlink" title="Less-15-Less-16:[布尔盲注]"></a>Less-15-Less-16:[布尔盲注]</h3><p>这题特点在于无报错，故报错注入不可行，尝试用盲注：</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">&#x27; <span class="hljs-keyword">or</span> <span class="hljs-built_in">length</span>(database())=<span class="hljs-number">8</span> <span class="hljs-comment">-- qwe</span><br></code></pre></td></tr></table></figure>
+
+<p>ascii函数可验证库名：security，用burp爆破亦可，同样的方法还可用于测表名：emails，字段名：id</p>
+<p>闭环方式：15：’   16:”)</p>
+<h3 id="Less-17：-报错注入"><a href="#Less-17：-报错注入" class="headerlink" title="Less-17：[报错注入]"></a>Less-17：[报错注入]</h3><p>打开发现提示要重置密码，正常测试是否存在注入如图：</p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-16%2520215432.png" srcset="/img/loading.gif" lazyload></p>
+<p>得知注入点在’New Password‘处：使用updatexml函数得库名：</p>
+<p>‘ and updatexml(1,concat(0x7e,(select database()),0x7e),1) – qwe</p>
+<p><img src="https://sujohn-ron.oss-cn-chengdu.aliyuncs.com/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE%25202024-10-16%2520215920.png" srcset="/img/loading.gif" lazyload></p>
+<p>接下来用与Less-13的方法得到表名：emails 列名：id</p>
 
                 
               </div>
@@ -323,7 +434,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%80%9D%E6%83%B3/" class="category-chain-item">思想</a>
+  <a href="/categories/%E9%9D%B6%E5%9C%BA/" class="category-chain-item">靶场</a>
   
   
 
@@ -338,9 +449,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%96%87%E5%AD%97/" class="print-no-link">#文字</a>
+        <a href="/tags/Web-Sec/" class="print-no-link">#Web Sec</a>
       
-        <a href="/tags/%E9%9A%8F%E7%AC%94/" class="print-no-link">#随笔</a>
+        <a href="/tags/%E9%9D%B6%E5%9C%BA/" class="print-no-link">#靶场</a>
       
     </div>
   
@@ -352,8 +463,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>我的生长痛</div>
-      <div>https://sujohn-ron.github.io/2026/04/29/我的生长痛/</div>
+      <div>SQL靶场通关记</div>
+      <div>https://sujohn-ron.github.io/2026/07/20/SQL靶场通关记/</div>
     </div>
     <div class="license-meta">
       
@@ -365,7 +476,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2026年4月29日</div>
+          <div>2026年7月20日</div>
         </div>
       
       
@@ -397,18 +508,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2026/07/20/SQL%E9%9D%B6%E5%9C%BA%E9%80%9A%E5%85%B3%E8%AE%B0/" title="SQL靶场通关记">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">SQL靶场通关记</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2026/03/10/Web%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E5%BD%95/" title="Web前端知识录">
-                        <span class="hidden-mobile">Web前端知识录</span>
+                      <a href="/2026/04/29/%E6%88%91%E7%9A%84%E7%94%9F%E9%95%BF%E7%97%9B/" title="我的生长痛">
+                        <span class="hidden-mobile">我的生长痛</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
